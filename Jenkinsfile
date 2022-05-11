@@ -39,7 +39,7 @@ pipeline {
             steps {
                 echo 'Deploying....'
                 sh "kubectl apply -f kuberantes-deployment-manifest.yml"
-                sh "kubectl apply -f service.yaml"
+                sh "kubectl apply -f service.yml"
                 sh "kubectl rollout restart deployment.apps/calc-deployment"
             }
         }
